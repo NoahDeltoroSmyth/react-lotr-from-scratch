@@ -1,8 +1,24 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
+import { fetchFilms } from './services/films';
+import { fetchCharacters } from './services/characters';
+//import { fetchBooks } from './services/books';
+import FilmList from './views/Films/FilmList';
+import CharacterList from './views/Characters/CharacterList';
+import BooksList from './views/Books/BooksList';
+import Home from './views/Home/Home';
 
 function App() {
+  const [films, setFilms] = useState([]);
+  const [characters, setCharacters] = useState([]);
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    fetchFilms();
+    fetchCharacters();
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
