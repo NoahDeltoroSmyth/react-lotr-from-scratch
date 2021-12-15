@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
 import Films from './views/Films/Films';
-// import CharacterList from './components/CharacterList';
+import Characters from './views/Characters/Characters';
 // import BooksList from './components/BooksList';
 // import Home from './views/Home/Home';
 
@@ -13,10 +13,10 @@ function App() {
           <NavLink to="/films" data-testid="film-link">
             Films
           </NavLink>
-          {/* <NavLink to="/characters" data-testid="char-link">
+          <NavLink to="/characters" data-testid="char-link">
             Characters
           </NavLink>
-          <NavLink to="/books" data-testid="book-link">
+          {/* <NavLink to="/books" data-testid="book-link">
             Books
           </NavLink>
           <NavLink to="/home" data-testid="home-link">
@@ -27,10 +27,10 @@ function App() {
           <Route path="/films">
             <Films />
           </Route>
-          {/* <Route path="/characters">
-            <CharacterList />
+          <Route path="/characters">
+            <Characters />
           </Route>
-          <Route path="/books">
+          {/* <Route path="/books">
             <BooksList />
           </Route>
           <Route path="/">
