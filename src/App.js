@@ -2,8 +2,8 @@ import './App.css';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
 import Films from './views/Films/Films';
 import Characters from './views/Characters/Characters';
-// import BooksList from './components/BooksList';
-// import Home from './views/Home/Home';
+import Books from './views/Books/Books';
+import Home from './views/Home/Home';
 
 function App() {
   return (
@@ -16,12 +16,12 @@ function App() {
           <NavLink to="/characters" data-testid="char-link">
             Characters
           </NavLink>
-          {/* <NavLink to="/books" data-testid="book-link">
+          <NavLink to="/books" data-testid="book-link">
             Books
           </NavLink>
-          <NavLink to="/home" data-testid="home-link">
+          <NavLink to="/" data-testid="/" exact>
             Home
-          </NavLink> */}
+          </NavLink>
         </header>
         <Switch>
           <Route path="/films">
@@ -30,12 +30,12 @@ function App() {
           <Route path="/characters">
             <Characters />
           </Route>
-          {/* <Route path="/books">
-            <BooksList />
+          <Route path="/books">
+            <Books />
           </Route>
-          <Route path="/">
+          <Route path="/" exact>
             <Home />
-          </Route> */}
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
