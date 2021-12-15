@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
-import FilmList from './components/FilmList';
-import CharacterList from './components/CharacterList';
-import BooksList from './components/BooksList';
-import Home from './views/Home/Home';
+import Films from './views/Films/Films';
+// import CharacterList from './components/CharacterList';
+// import BooksList from './components/BooksList';
+// import Home from './views/Home/Home';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <NavLink to="/films" data-testid="film-link">
             Films
           </NavLink>
-          <NavLink to="/characters" data-testid="char-link">
+          {/* <NavLink to="/characters" data-testid="char-link">
             Characters
           </NavLink>
           <NavLink to="/books" data-testid="book-link">
@@ -21,13 +21,13 @@ function App() {
           </NavLink>
           <NavLink to="/home" data-testid="home-link">
             Home
-          </NavLink>
+          </NavLink> */}
         </header>
         <Switch>
           <Route path="/films">
-            <FilmList />
+            <Films />
           </Route>
-          <Route path="/characters">
+          {/* <Route path="/characters">
             <CharacterList />
           </Route>
           <Route path="/books">
@@ -35,7 +35,7 @@ function App() {
           </Route>
           <Route path="/">
             <Home />
-          </Route>
+          </Route> */}
         </Switch>
       </BrowserRouter>
     </div>
